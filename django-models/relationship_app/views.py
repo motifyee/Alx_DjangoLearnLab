@@ -1,5 +1,7 @@
 
+from multiprocessing import context
 from django.http import HttpResponse
+from django.shortcuts import render
 from django.views.generic.detail import DetailView
 from .models import Library, Book
 
@@ -7,7 +9,8 @@ from .models import Library, Book
 def all_books(request):
     template_name = 'relationship_app/list_books.html'
     books = Book.objects.all()
-    return HttpResponse(books)
+    context = {'books': books}
+    return render(request, 'relationship_app/list_books.html', context)
 
 
 class LibraryDetailView(DetailView):
