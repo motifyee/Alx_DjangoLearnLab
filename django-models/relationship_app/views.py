@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from relationship_app.models import Book, Library
+from .models import Library, Book
 
 
 def all_books(request):
