@@ -4,6 +4,7 @@ from relationship_app.models import Book, Library
 
 
 def all_books(request):
+    template_name = 'relationship_app/list_books.html'
     books = Book.objects.all()
     return HttpResponse(books)
 
