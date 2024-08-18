@@ -11,6 +11,7 @@ def all_books(request):
 
 class LibraryView(ListView):
     model = Library
+    template_name = 'relationship_app/library_detail.html'
 
     def get_context_data(self, **kwargs):
         library_name = ""
