@@ -48,23 +48,17 @@ def is_librarian(user):
 def is_member(user):
     return user.userprofile.role == 'Member'
 
-# Admin view
-
 
 @login_required
 @user_passes_test(is_admin)
 def admin_view(request):
     return render(request, 'relationship_app/admin_view.html')
 
-# Librarian view
-
 
 @login_required
 @user_passes_test(is_librarian)
 def librarian_view(request):
     return render(request, 'relationship_app/librarian_view.html')
-
-# Member view
 
 
 @login_required
