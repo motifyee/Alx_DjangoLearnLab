@@ -3,7 +3,7 @@ from django.views.generic import CreateView
 from django.urls import reverse_lazy
 from django.urls import path
 from flask import views
-from .views import all_books, LibraryDetailView, LoginView, LogoutView
+from .views import list_books, all_books , LibraryDetailView, LoginView, LogoutView
 
 
 class SignUpView(CreateView):
