@@ -28,11 +28,9 @@ class LibraryDetailView(DetailView):
         context['library'] = library
 
 
-def LoginView(request):
-    # template_name = 'relationship_app/login.html'
-    return render(request, 'relationship_app/login.html')
+class LoginView(DetailView):
+    template_name = 'relationship_app/login.html'
 
 
-def LogoutView(request):
-    # template_name = 'relationship_app/logout.html'
-    return render(request, 'relationship_app/logout.html')
+class LogoutView(DetailView):
+    template_name = 'relationship_app/logout.html'
