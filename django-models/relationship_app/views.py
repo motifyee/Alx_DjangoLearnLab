@@ -4,6 +4,8 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.generic.detail import DetailView
 from .models import Library, Book
+from django.contrib.auth import login
+from django.contrib.auth.forms import UserCreationForm
 
 
 def all_books(request):
