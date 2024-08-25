@@ -17,6 +17,10 @@ class SignUpView(CreateView):
 
 urlpatterns = [
     path('books/', all_books, name='books'),
+    path('add_book/add/', add_book, name="add_book"),
+    path('edit_book/<int:pk>/edit/', edit_book, name="edit_book"),
+    path('delete_book/<int:pk>/delete/', delete_book, name="delete_book"),
+    
     path('library', LibraryDetailView.as_view(), name='library'),
     path('login', LoginView.as_view(template_name="login.html"), name='login'),
     path('logout', LogoutView.as_view(template_name="logout.html"), name='logout'),
